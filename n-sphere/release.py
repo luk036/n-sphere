@@ -1,14 +1,14 @@
-"""Release data for EllPy.
+"""Release data for N-Sphere.
 
-When EllPy is imported a number of steps are followed to determine
+When N-Sphere is imported a number of steps are followed to determine
 the version information.
 
    1) If the release is not a development release (dev=False), then version
       information is read from version.py, a file containing statically
       defined version information.  This file should exist on every
-      downloadable release of EllPy since setup.py creates it during
+      downloadable release of N-Sphere since setup.py creates it during
       packaging/installation.  However, version.py might not exist if one
-      is running EllPy from the mercurial repository.  In the event that
+      is running N-Sphere from the mercurial repository.  In the event that
       version.py does not exist, then no vcs information will be available.
 
    2) If the release is a development release, then version information
@@ -23,7 +23,7 @@ When setup.py creates version.py, it does so before packaging/installation.
 So the created file is included in the source distribution.  When a user
 downloads a tar.gz file and extracts the files, the files will not be in a
 live version control repository.  So when the user runs setup.py to install
-EllPy, we must make sure write_versionfile() does not overwrite the
+N-Sphere, we must make sure write_versionfile() does not overwrite the
 revision information contained in the version.py that was included in the
 tar.gz file. This is why write_versionfile() includes an early escape.
 
@@ -49,7 +49,7 @@ def write_versionfile():
     versionfile = os.path.join(basedir, 'version.py')
 
     text = '''"""
-Version information for EllPy, created during installation.
+Version information for N-Sphere, created during installation.
 
 Do not add this file to the repository.
 
@@ -60,7 +60,7 @@ import datetime
 version = %(version)r
 date = %(date)r
 
-# Was EllPy built from a development version? If so, remember that the major
+# Was N-Sphere built from a development version? If so, remember that the major
 # and minor versions reference the "target" (rather than "current") release.
 dev = %(dev)r
 
@@ -148,7 +148,7 @@ def get_info(dynamic=True):
             dynamic_failed = True
 
     if dynamic_failed or not dynamic:
-        # This is where most final releases of EllPy will be.
+        # This is where most final releases of N-Sphere will be.
         # All info should come from version.py. If it does not exist, then
         # no vcs information will be provided.
         # sys.path.insert(0, basedir)
@@ -174,7 +174,7 @@ def get_info(dynamic=True):
 
 
 # Version information
-name = 'ellpy'
+name = 'n-sphere'
 major = "2"
 minor = "2rc1"
 
@@ -188,16 +188,16 @@ description = "Python package for creating and manipulating projective geometry"
 
 long_description = \
     """
-EllPy is a Python package for the creation, manipulation, and
+N-Sphere is a Python package for the creation, manipulation, and
 study of the structure, dynamics, and functions of projective geometry.
 
 """
 license = 'BSD'
 authors = {'luk036': ('Wai-Shing Luk', 'luk036@gmail.com')}
-maintainer = "EllPy Developers"
-maintainer_email = "ellpy-discuss@googlegroups.com"
-url = 'http://ellpy.github.io/'
-download_url = 'https://pypi.python.org/pypi/ellpy/'
+maintainer = "N-Sphere Developers"
+maintainer_email = "n-sphere-discuss@googlegroups.com"
+url = 'http://n-sphere.github.io/'
+download_url = 'https://pypi.python.org/pypi/n-sphere/'
 platforms = ['Linux', 'Mac OSX', 'Windows', 'Unix']
 keywords = ['Projective Geometry', 'Geometry', 'Mathematics',
             'geometry', 'mathematics', 'math']

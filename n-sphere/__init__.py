@@ -1,5 +1,5 @@
 """
-EllPy
+N-Sphere
 =====
 """
 
@@ -12,13 +12,13 @@ if sys.version_info[:2] < (2, 7):
 del sys
 
 # Release data
-from ellpy import release
+from n-sphere import release
 
-# from ellpy.oracles import *
-from ellpy.cutting_plane import *
-from ellpy.ell import *
-from ellpy.problem import Problem
+# from n-sphere.oracles import *
+from n-sphere.cutting_plane import *
+from n-sphere.ell import *
+from n-sphere.problem import Problem
 
-import ellpy.oracles
-from ellpy.oracles import *
-# from ellpy.lsq_corr_ell import lsq_corr_poly, lsq_corr_bspline
+import n-sphere.oracles
+from n-sphere.oracles import *
+# from n-sphere.lsq_corr_ell import lsq_corr_poly, lsq_corr_bspline

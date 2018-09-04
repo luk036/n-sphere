@@ -1,9 +1,9 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 """
-Setup script for ellpy
+Setup script for n-sphere
 
-You can install ellpy with
+You can install n-sphere with
 
 python setup.py install
 """
@@ -20,21 +20,21 @@ if sys.argv[-1] == 'setup.py':
     print()
 
 if sys.version_info[:2] < (2, 7):
-    print("ellpy requires Python 2.7 or later (%d.%d detected)." %
+    print("n-sphere requires Python 2.7 or later (%d.%d detected)." %
           sys.version_info[:2])
     sys.exit(-1)
 
 # Write the version information.
-sys.path.insert(0, 'ellpy')
+sys.path.insert(0, 'n-sphere')
 import release
 version = release.write_versionfile()
 sys.path.pop(0)
 
-packages = ["ellpy",
-            "ellpy.oracles",
-            "ellpy.tests"]
+packages = ["n-sphere",
+            "n-sphere.oracles",
+            "n-sphere.tests"]
 
-# docdirbase = 'share/doc/ellpy-%s' % version
+# docdirbase = 'share/doc/n-sphere-%s' % version
 # # add basic documentation
 # data = [(docdirbase, glob("*.txt"))]
 # # add examples
@@ -64,7 +64,7 @@ packages = ["ellpy",
 
 # add the tests
 package_data = {
-    'ellpy': ['tests/*.py']
+    'n-sphere': ['tests/*.py']
 }
 
 install_requires = ['decorator>=4.1.0', 'numpy>=1.12.0']
