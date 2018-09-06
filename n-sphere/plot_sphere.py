@@ -5,6 +5,7 @@ from scipy.spatial import ConvexHull
 import matplotlib.pyplot as plt
 import numpy as np
 from sphere import sphere
+from discrep_2 import discrep_2
 
 def average_g(triples):
     return np.mean([triple[2] for triple in triples])
@@ -15,7 +16,7 @@ def sample_spherical(npoints, ndim=3):
     return vec.transpose()
 
 #Triples = np.array(list(zip(X, Y, Z)))
-npoints = 300
+npoints = 600
 
 fig = plt.figure()
 ax1 = fig.add_subplot(121, projection='3d')
@@ -24,6 +25,8 @@ ax2 = fig.add_subplot(122, projection='3d')
 Triples = np.array([p for p in sphere(npoints, [2, 3, 5])])
 hull = ConvexHull(Triples)
 triangles = hull.simplices
+measure = discrep_2(triangles, Triples)
+print(measure)
 
 colors = np.array([average_g([Triples[idx] for idx in triangle]) for
                    triangle in triangles])
@@ -41,6 +44,8 @@ collec.autoscale()
 Triples = sample_spherical(npoints)
 hull = ConvexHull(Triples)
 triangles = hull.simplices
+measure = discrep_2(triangles, Triples)
+print(measure)
 
 colors = np.array([average_g([Triples[idx] for idx in triangle]) for
                    triangle in triangles])

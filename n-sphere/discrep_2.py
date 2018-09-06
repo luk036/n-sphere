@@ -13,11 +13,11 @@ def discrep_2(K, X):
         p = X[K[k, :], :]
         for i in range(n-1):
             for j in range(i+1, n):
-                dot = np.dot(p[:, i], p[:, j])
-                d = np.sqrt(1.0 - dot*dot)
+                dot = np.dot(p[i, :], p[j, :])
+                d = 1.0 - dot*dot
                 if maxd < d:
                     maxd = d
                 if mind > d:
                     mind = d
-    dis = maxd - mind
+    dis = np.arcsin(np.sqrt(maxd)) - np.arcsin(np.sqrt(mind))
     return dis
