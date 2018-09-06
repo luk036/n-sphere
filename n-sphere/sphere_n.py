@@ -44,6 +44,6 @@ def sphere_n(k, n, b):
 
 
 if __name__ == "__main__":
-    b = [2, 3, 5, 7]
-    for s in sphere_n(10, 4, b):
-        print(s)
+    b = [2, 3, 5, 7, 2]
+    points = np.array([p for p in sphere_n(10, 3, b)])
+    print(points[0]*4.0)

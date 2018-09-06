@@ -17,5 +17,5 @@ def vdcorput(n, base=2):
 
 
 if __name__ == "__main__":
-    for s in vdcorput(10, 2):
+    for s in vdcorput(20, 3):
         print(s)
