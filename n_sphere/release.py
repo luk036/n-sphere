@@ -174,7 +174,7 @@ def get_info(dynamic=True):
 
 
 # Version information
-name = 'n-sphere'
+name = 'n_sphere'
 major = "2"
 minor = "2rc1"
 
@@ -195,12 +195,12 @@ study of the structure, dynamics, and functions of projective geometry.
 license = 'BSD'
 authors = {'luk036': ('Wai-Shing Luk', 'luk036@gmail.com')}
 maintainer = "N-Sphere Developers"
-maintainer_email = "n-sphere-discuss@googlegroups.com"
-url = 'http://n-sphere.github.io/'
-download_url = 'https://pypi.python.org/pypi/n-sphere/'
+maintainer_email = "n_sphere-discuss@googlegroups.com"
+url = 'http://n_sphere.github.io/'
+download_url = 'https://pypi.python.org/pypi/n_sphere/'
 platforms = ['Linux', 'Mac OSX', 'Windows', 'Unix']
-keywords = ['Projective Geometry', 'Geometry', 'Mathematics',
-            'geometry', 'mathematics', 'math']
+keywords = ['Low discrepancy', 'Halton', 'Mathematics',
+            'n_sphere', 'mathematics', 'math']
 classifiers = [
     'Development Status :: 5 - Production/Stable',
     'Intended Audience :: Developers',

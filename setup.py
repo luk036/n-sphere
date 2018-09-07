@@ -1,9 +1,9 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 """
-Setup script for n-sphere
+Setup script for n_sphere
 
-You can install n-sphere with
+You can install n_sphere with
 
 python setup.py install
 """
@@ -20,21 +20,21 @@ if sys.argv[-1] == 'setup.py':
     print()
 
 if sys.version_info[:2] < (2, 7):
-    print("n-sphere requires Python 2.7 or later (%d.%d detected)." %
+    print("n_sphere requires Python 2.7 or later (%d.%d detected)." %
           sys.version_info[:2])
     sys.exit(-1)
 
 # Write the version information.
-sys.path.insert(0, 'n-sphere')
+sys.path.insert(0, 'n_sphere')
 import release
 version = release.write_versionfile()
 sys.path.pop(0)
 
-packages = ["n-sphere",
-            "n-sphere.oracles",
-            "n-sphere.tests"]
+packages = ["n_sphere",
+            "n_sphere.experiments",
+            "n_sphere.tests"]
 
-# docdirbase = 'share/doc/n-sphere-%s' % version
+# docdirbase = 'share/doc/n_sphere-%s' % version
 # # add basic documentation
 # data = [(docdirbase, glob("*.txt"))]
 # # add examples
@@ -64,7 +64,7 @@ packages = ["n-sphere",
 
 # add the tests
 package_data = {
-    'n-sphere': ['tests/*.py']
+    'n_sphere': ['tests/*.py']
 }
 
 install_requires = ['decorator>=4.1.0', 'numpy>=1.12.0']

@@ -149,7 +149,7 @@ for it=1:ndir
         
         % Find angles corresponding to the normalised sequence
         tht = atan2(sqrt(flipud(cumsum(b(N_dim:-1:2).^2))),b(1:N_dim-1)).';
-        % Find coordinates of unit direction vectors on n-sphere
+        % Find coordinates of unit direction vectors on n_sphere
         dir_vec(1:N_dim) = [1 cumprod(sin(tht))];
         dir_vec(1:N_dim-1) =  cos(tht) .*dir_vec(1:N_dim-1);
 
@@ -196,7 +196,7 @@ for it=1:ndir
         b=2*seq(1:end,it)-1;
         % Find angles corresponding to the normalised sequence
         tht = atan2(sqrt(flipud(cumsum(b(N_dim:-1:2).^2))),b(1:N_dim-1)).';
-        % Find coordinates of unit direction vectors on n-sphere
+        % Find coordinates of unit direction vectors on n_sphere
         dir_vec(1:N_dim) = [1 cumprod(sin(tht))];
         dir_vec(1:N_dim-1) =  cos(tht) .*dir_vec(1:N_dim-1);
     else % Trivariate signal with hammersley sequence

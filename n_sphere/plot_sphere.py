@@ -1,11 +1,12 @@
 from mpl_toolkits.mplot3d import Axes3D
 import matplotlib.pyplot as plt
 import matplotlib.tri as mtri
-from scipy.spatial import ConvexHull
 import matplotlib.pyplot as plt
+
+from scipy.spatial import ConvexHull
 import numpy as np
-from sphere import sphere
-from discrep_2 import discrep_2
+from n_sphere.sphere import sphere
+from n_sphere.discrep_2 import discrep_2
 
 def average_g(triples):
     return np.mean([triple[2] for triple in triples])

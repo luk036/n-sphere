@@ -1,7 +1,7 @@
 import math
 import numpy as np
-from vdcorput import vdcorput
-from sphere3 import sphere3
+from .vdcorput import vdcorput
+from .sphere3 import sphere3
 
 
 def int_sin_power(n, x):
@@ -14,7 +14,7 @@ def int_sin_power(n, x):
 
 def sphere_n(k, n, b):
     """ 
-    n-sphere Base-b Halton elements 0,..,k
+    n_sphere Base-b Halton elements 0,..,k
      INPUTS   : k - maximum sequence index, non-negative integer
                 b - sequence base, integer exceeding 1
      OUTPUTS  : s - (k+1)*(n+1) array, with s(i) storing element (i+1)

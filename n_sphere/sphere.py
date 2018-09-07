@@ -1,5 +1,5 @@
 import math
-from vdcorput import vdcorput
+from .vdcorput import vdcorput
 
 
 def circle(k, base=2):

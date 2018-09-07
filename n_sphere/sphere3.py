@@ -1,7 +1,7 @@
 import math
 import numpy as np
-from vdcorput import vdcorput
-from sphere import sphere
+from .vdcorput import vdcorput
+from .sphere import sphere
 
 
 def sphere3(k, b):
