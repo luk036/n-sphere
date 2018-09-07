@@ -24,7 +24,8 @@ def sphere_n(k, n, b):
     assert len(b) >= n
 
     if n == 3:
-        yield from sphere3(k, b)
+        for s in sphere3(k, b):
+            yield s
         return
 
     m = 3*k  # number of interpolation points???
