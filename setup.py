@@ -31,7 +31,6 @@ version = release.write_versionfile()
 sys.path.pop(0)
 
 packages = ["n_sphere",
-            "n_sphere.experiments",
             "n_sphere.tests"]
 
 # docdirbase = 'share/doc/n_sphere-%s' % version
@@ -68,7 +67,7 @@ package_data = {
 }
 
 install_requires = ['decorator>=4.1.0', 'numpy>=1.12.0']
-extras_require = {'all': ['cvxpy', 'matplotlib']}
+extras_require = {'all': ['sympy', 'matplotlib']}
 
 if __name__ == "__main__":
 
