@@ -19,5 +19,5 @@ def test_cylin_n():
     hull = ConvexHull(Triples)
     triangles = hull.simplices
     measure = discrep_2(triangles, Triples)
-    assert measure < 0.913
-    assert measure > 0.912
+    assert measure < 1.086
+    assert measure > 1.085
