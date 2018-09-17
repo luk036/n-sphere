@@ -2,6 +2,7 @@ import math
 import numpy as np
 from .vdcorput import vdcorput
 from .sphere3 import sphere3
+from .sphere import sphere, circle
 
 
 def int_sin_power(n, x):
@@ -20,11 +21,11 @@ def sphere_n(k, n, b):
      OUTPUTS  : s - (k+1)*(n+1) array, with s(i) storing element (i+1)
                     of base-b low discrepancy sequence
     """
-    assert n >= 3
+    assert n >= 2
     assert len(b) >= n
 
-    if n == 3:
-        for s in sphere3(k, b):
+    if n == 2:
+        for s in sphere(k, b):
             yield s
         return
 
@@ -44,7 +45,34 @@ def sphere_n(k, n, b):
         yield s
 
 
+def cylin_n(k, n, b):
+    """ 
+    n_sphere using cylindrical coordinate method
+     INPUTS   : k - maximum sequence index, non-negative integer
+                b - sequence base, integer exceeding 1
+     OUTPUTS  : s - (k+1)*(n+1) array, with s(i) storing element (i+1)
+                    of base-b low discrepancy sequence
+    """
+    assert n >= 1
+    assert len(b) >= n
+
+    if n == 1:
+        for s in circle(k, b[0]):
+            yield s
+        return
+
+    S = cylin_n(k, n-1, b[1:])
+
+    for vd in vdcorput(k, b[0]):
+        cosphi = 2*vd - 1         # map to [-1, 1]
+        sinphi = math.sqrt(1 - cosphi*cosphi)
+        s3 = sinphi * np.array(next(S))
+        s = [cosphi] + s3.tolist()
+        yield s
+
 if __name__ == "__main__":
-    b = [2, 3, 5, 7, 2]
+    b = [2, 3, 5, 7, 11]
     points = np.array([p for p in sphere_n(10, 3, b)])
-    print(points[0]*4.0)
+    print(points)
+    points = np.array([p for p in cylin_n(10, 3, b)])
+    print(points)

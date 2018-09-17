@@ -6,9 +6,9 @@ import matplotlib.pylab as lab
 
 from scipy.spatial import ConvexHull
 import numpy as np
-from n_sphere.sphere_n import sphere_n
+from n_sphere.sphere_n import sphere_n, cylin_n
 from n_sphere.discrep_2 import discrep_2
-
+from vdcorput import prime_table
 
 def sample_spherical(npoints, ndim=3):
     vec = np.random.randn(ndim, npoints)
@@ -24,20 +24,25 @@ def dispersion(Triples):
 
 
 npoints = 4000
-n = 5
+n = 4
+b = prime_table[:n]
 Triples_r = sample_spherical(npoints, n)
-Triples_s = np.array([p for p in sphere_n(npoints, n-1, [2, 3, 5, 7])])
+Triples_s = np.array([p for p in sphere_n(npoints, n-1, b)])
+Triples_c = np.array([p for p in cylin_n(npoints, n-1, b)])
 
 x = list(range(100, npoints, 100))
 res_r = []
 res_s = []
+res_c = []
 
 for i in x:
     res_r += [dispersion(Triples_r[:i, :])]
     res_s += [dispersion(Triples_s[:i, :])]
+    res_c += [dispersion(Triples_c[:i, :])]
 
 plt.plot(x, res_r, 'r', label='Random')
 plt.plot(x, res_s, 'g', label='Our')
+plt.plot(x, res_c, 'b', label='Cylin')
 plt.legend(loc='best')
 plt.xlabel('#points')
 plt.ylabel('discrepancy')
