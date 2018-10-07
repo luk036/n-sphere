@@ -6,7 +6,7 @@ from n_sphere.discrep_2 import discrep_2
 
 def test_sphere():
     npoints = 600
-    Triples = np.array([p for p in sphere3(npoints, [2, 3, 5, 2])])
+    Triples = np.array([p for p in sphere3(npoints, [2, 3, 5, 7])])
     hull = ConvexHull(Triples)
     triangles = hull.simplices
     measure = discrep_2(triangles, Triples)
@@ -16,7 +16,7 @@ def test_sphere():
 
 def test_sphere_hopf():
     npoints = 600
-    Triples = np.array([p for p in sphere3_hopf(npoints, [2, 3, 5, 2])])
+    Triples = np.array([p for p in sphere3_hopf(npoints, [2, 3, 5, 7])])
     hull = ConvexHull(Triples)
     triangles = hull.simplices
     measure = discrep_2(triangles, Triples)
