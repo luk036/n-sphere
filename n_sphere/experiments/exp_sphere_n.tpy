@@ -8,7 +8,7 @@ from scipy.spatial import ConvexHull
 import numpy as np
 from n_sphere.sphere_n import sphere_n, cylin_n
 from n_sphere.discrep_2 import discrep_2
-from vdcorput import prime_table
+from n_sphere.vdcorput import prime_table
 
 def sample_spherical(npoints, ndim=3):
     vec = np.random.randn(ndim, npoints)
@@ -24,7 +24,7 @@ def dispersion(Triples):
 
 
 npoints = 4000
-n = 4
+n = 5
 b = prime_table[:n]
 Triples_r = sample_spherical(npoints, n)
 Triples_s = np.array([p for p in sphere_n(npoints, n-1, b)])
