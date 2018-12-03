@@ -14,7 +14,7 @@ def int_sin_power(n, x):
 
 
 def sphere_n(k, n, b):
-    """ 
+    """
     n_sphere Base-b Halton elements 0,..,k
      INPUTS   : k - maximum sequence index, non-negative integer
                 b - sequence base, integer exceeding 1
@@ -69,6 +69,7 @@ def cylin_n(k, n, b):
         s3 = sinphi * np.array(next(S))
         s = [cosphi] + s3.tolist()
         yield s
+
 
 if __name__ == "__main__":
     b = [2, 3, 5, 7, 11]
