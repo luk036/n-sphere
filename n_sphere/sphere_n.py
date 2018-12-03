@@ -1,7 +1,6 @@
 import math
 import numpy as np
 from .vdcorput import vdcorput
-from .sphere3 import sphere3
 from .sphere import sphere, circle
 
 

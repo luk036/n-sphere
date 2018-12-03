@@ -1,7 +1,5 @@
-from mpl_toolkits.mplot3d import Axes3D
 import matplotlib.pyplot as plt
 import matplotlib.tri as mtri
-import matplotlib.pyplot as plt
 
 from scipy.spatial import ConvexHull
 import numpy as np
