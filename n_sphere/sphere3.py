@@ -5,10 +5,16 @@ from .sphere import sphere
 
 
 def sphere3(k, b):
-    """
-     3sphere   Base-b Halton elements 0,..,k
-     INPUTS   : k - maximum sequence index, non-negative integer
-                b - sequence base, integer exceeding 1
+    """Generate Sphere-3 Halton sequence 0,..,k
+    
+    Arguments:
+        k {int} -- maximum sequence index, non-negative integer
+
+    Keyword Arguments:
+        b {list(int)} -- sequence base, integer exceeding 1
+
+    Returns:
+        {list(float)} -- base-b low discrepancy sequence
     """
     assert len(b) >= 3
 

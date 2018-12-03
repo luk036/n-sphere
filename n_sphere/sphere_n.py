@@ -5,6 +5,15 @@ from .sphere import sphere, circle
 
 
 def int_sin_power(n, x):
+    """Evaluate $\int sin^n(x) dx$
+    
+    Arguments:
+        n {int} -- power
+        x {float} -- [description]
+    
+    Returns:
+        float -- [description]
+    """
     if n == 0:
         return x
     if n == 1:
@@ -13,12 +22,15 @@ def int_sin_power(n, x):
 
 
 def sphere_n(k, n, b):
-    """
-    n_sphere Base-b Halton elements 0,..,k
-     INPUTS   : k - maximum sequence index, non-negative integer
-                b - sequence base, integer exceeding 1
-     OUTPUTS  : s - (k+1)*(n+1) array, with s(i) storing element (i+1)
-                    of base-b low discrepancy sequence
+    """Generate n-sphere base-b Halton sequence 0,..,k
+    
+    Arguments:
+        k {int} -- maximum sequence index, non-negative integer
+        n {int} -- [description]
+        b {list(int)} -- sequence base, integer exceeding 1
+
+    Returns:
+        {list(float)} -- base-b low discrepancy sequence
     """
     assert n >= 2
     assert len(b) >= n
@@ -45,12 +57,15 @@ def sphere_n(k, n, b):
 
 
 def cylin_n(k, n, b):
-    """ 
-    n_sphere using cylindrical coordinate method
-     INPUTS   : k - maximum sequence index, non-negative integer
-                b - sequence base, integer exceeding 1
-     OUTPUTS  : s - (k+1)*(n+1) array, with s(i) storing element (i+1)
-                    of base-b low discrepancy sequence
+    """Generate using cylindrical coordinate method
+    
+    Arguments:
+        k {int} -- maximum sequence index, non-negative integer
+        n {int} -- [description]
+        b {list(int)} -- sequence base, integer exceeding 1
+
+    Returns:
+        {list(float)} -- base-b low discrepancy sequence
     """
     assert n >= 1
     assert len(b) >= n

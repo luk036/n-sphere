@@ -3,12 +3,16 @@ from .vdcorput import vdcorput
 
 
 def circle(k, base=2):
-    """
-    Circle   Base-b Halton elements 0,..,k
-     INPUTS   : k - maximum sequence index, non-negative integer
-                b - sequence bases, integer exceeding 1
-     OUTPUTS  : s - (k+1)*3 array, with s(i) storing element (i+1)
-                    of base-b low discrepancy sequence
+    """Generate Circle Halton sequence 0,..,k
+    
+    Arguments:
+        k {int} -- maximum sequence index, non-negative integer
+
+    Keyword Arguments:
+        base {int} -- [description] (default: {2})
+
+    Returns:
+        {list(float)} -- base-b low discrepancy sequence
     """
     for vd in vdcorput(k, base):
         theta = 2*math.pi*vd      # map to [0, 2*math.pi]
@@ -17,12 +21,16 @@ def circle(k, base=2):
 
 
 def sphere(k, b):
-    """
-    2sphere   Base-b Halton elements 0,..,k
-     INPUTS   : k - maximum sequence index, non-negative integer
-                b - sequence bases, integer exceeding 1
-     OUTPUTS  : s - (k+1)*3 array, with s(i) storing element (i+1)
-                    of base-b low discrepancy sequence
+    """Generate Sphere Halton sequence 0,..,k
+    
+    Arguments:
+        k {int} -- maximum sequence index, non-negative integer
+
+    Keyword Arguments:
+        b {list(int)} -- sequence base, integer exceeding 1
+
+    Returns:
+        {list(float)} -- base-b low discrepancy sequence
     """
     assert len(b) >= 2
 

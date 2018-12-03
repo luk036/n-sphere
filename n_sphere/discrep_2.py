@@ -2,9 +2,14 @@ import numpy as np
 
 
 def discrep_2(K, X):
-    """
-    measure discrepancy
-    K = convhulln(X)
+    """dispersion measure
+    
+    Arguments:
+        K {[type]} -- [description]
+        X {[type]} -- [description]
+    
+    Returns:
+        float -- dispersion
     """
     nsimplex, n = K.shape
     maxq = 0
