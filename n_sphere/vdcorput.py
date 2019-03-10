@@ -1,4 +1,15 @@
 def vdc(n, base=2):
+    """[summary]
+    
+    Arguments:
+        n {int} -- number
+    
+    Keyword Arguments:
+        base {int} -- [description] (default: {2})
+    
+    Returns:
+        int -- [description]
+    """
     vdc, denom = 0.0, 1.0
     while n:
         denom *= base
@@ -8,10 +19,17 @@ def vdc(n, base=2):
 
 
 def vdcorput(n, base=2):
-    '''
-    n - number of vectors
-    base - seeds
-    '''
+    """[summary]
+    
+    Arguments:
+        n {int} -- number of points
+    
+    Keyword Arguments:
+        base {int} -- [description] (default: {2})
+    
+    Returns:
+        int -- [description]
+    """
     for i in range(n):
         yield vdc(i, base)
 

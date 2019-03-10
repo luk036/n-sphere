@@ -4,7 +4,7 @@ from .vdcorput import vdcorput
 
 def circle(k, base=2):
     """Generate Circle Halton sequence 0,..,k
-    
+
     Arguments:
         k {int} -- maximum sequence index, non-negative integer
 
@@ -22,7 +22,7 @@ def circle(k, base=2):
 
 def sphere(k, b):
     """Generate Sphere Halton sequence 0,..,k
-    
+
     Arguments:
         k {int} -- maximum sequence index, non-negative integer
 

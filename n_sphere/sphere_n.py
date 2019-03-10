@@ -5,12 +5,12 @@ from .sphere import sphere, circle
 
 
 def int_sin_power(n, x):
-    """Evaluate $\int sin^n(x) dx$
-    
+    """Evaluate $$\int sin^n(x) dx$$
+
     Arguments:
         n {int} -- power
         x {float} -- [description]
-    
+
     Returns:
         float -- [description]
     """
@@ -23,7 +23,7 @@ def int_sin_power(n, x):
 
 def sphere_n(k, n, b):
     """Generate n-sphere base-b Halton sequence 0,..,k
-    
+
     Arguments:
         k {int} -- maximum sequence index, non-negative integer
         n {int} -- [description]
@@ -58,7 +58,7 @@ def sphere_n(k, n, b):
 
 def cylin_n(k, n, b):
     """Generate using cylindrical coordinate method
-    
+
     Arguments:
         k {int} -- maximum sequence index, non-negative integer
         n {int} -- [description]

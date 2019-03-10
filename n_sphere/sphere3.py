@@ -6,7 +6,7 @@ from .sphere import sphere
 
 def sphere3(k, b):
     """Generate Sphere-3 Halton sequence 0,..,k
-    
+
     Arguments:
         k {int} -- maximum sequence index, non-negative integer
 
