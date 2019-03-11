@@ -27,5 +27,5 @@ def halton_n(k, n, b):
 
 if __name__ == "__main__":
     b = [2, 3]
-    points = [p for p in halton_n(10, 2, b)]
+    points = np.array([p for p in halton_n(10, 2, b)])
     print(points)

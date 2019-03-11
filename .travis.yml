@@ -32,13 +32,6 @@ matrix:
       - OPTIONAL_DEPS=1
       - MINIMUM_REQUIREMENTS=1
     - os: osx
-      osx_image: xcode7.3
-      language: generic
-      env:
-      - TRAVIS_PYTHON_VERSION=3.6.0
-      - OPTIONAL_DEPS=1
-      - OSX_PKG_ENV=miniconda
-    - os: osx
       language: generic
       env: TRAVIS_PYTHON_VERSION=3.6
     - python: 2.7
