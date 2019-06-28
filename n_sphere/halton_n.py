@@ -1,6 +1,6 @@
 import math
 import numpy as np
-from vdcorput import vdcorput
+from .vdcorput import vdcorput
 
 
 def halton_n(k, n, b):

@@ -1,7 +1,9 @@
+from pytest import approx
+
 from scipy.spatial import ConvexHull
 import numpy as np
-from n_sphere.sphere import sphere
-from n_sphere.discrep_2 import discrep_2
+from ..sphere import sphere
+from ..discrep_2 import discrep_2
 
 
 def test_sphere():
@@ -10,5 +12,6 @@ def test_sphere():
     hull = ConvexHull(Triples)
     triangles = hull.simplices
     measure = discrep_2(triangles, Triples)
-    assert measure < 0.2884
-    assert measure > 0.2883
+    assert measure == approx(0.2883404521)
+    # assert measure < 0.2884
+    # assert measure > 0.2883
