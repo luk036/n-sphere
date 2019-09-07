@@ -63,4 +63,3 @@ test_script:
   # Change to a non-source folder to make sure we run the tests on the
   # installed library.
   - "pytest --cov=./"
-
