@@ -1,4 +1,5 @@
 # Temporary and binary files
+.vscode*/*
 *~
 *.py[cod]
 *.so
@@ -47,3 +48,6 @@ MANIFEST
 
 # Per-project virtualenvs
 .venv*/
+
+# mypy
+.mypy_cache/
