@@ -7,13 +7,13 @@ def circle(k, base=2):
     """Generate Circle Halton sequence 0,..,k
 
     Arguments:
-        k {int} -- maximum sequence index, non-negative integer
+        k (int): maximum sequence index, non-negative integer
 
     Keyword Arguments:
-        base {int} -- [description] (default: {2})
+        base (int): [description] (default: {2})
 
     Returns:
-        {list(float)} -- base-b low discrepancy sequence
+        (list(float)): base-b low discrepancy sequence
     """
     for vd in vdcorput(k, base):
         theta = 2 * math.pi * vd  # map to [0, 2*math.pi]
@@ -25,13 +25,13 @@ def sphere(k, b):
     """Generate Sphere Halton sequence 0,..,k
 
     Arguments:
-        k {int} -- maximum sequence index, non-negative integer
+        k (int): maximum sequence index, non-negative integer
 
     Keyword Arguments:
-        b {list(int)} -- sequence base, integer exceeding 1
+        b (list(int)): sequence base, integer exceeding 1
 
     Returns:
-        {list(float)} -- base-b low discrepancy sequence
+        (list(float)): base-b low discrepancy sequence
     """
     assert len(b) >= 2
 

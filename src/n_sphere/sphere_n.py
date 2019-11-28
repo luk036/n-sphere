@@ -10,11 +10,11 @@ def int_sin_power(n, x):
     """Evaluate integral sin^n(x) dx
 
     Arguments:
-        n {int} -- power
-        x {float} -- [description]
+        n (int): power
+        x (float): [description]
 
     Returns:
-        float -- [description]
+        float: [description]
     """
     if n == 0:
         return x
@@ -28,12 +28,12 @@ def sphere_n(k, n, b):
     """Generate n-sphere base-b Halton sequence 0,..,k
 
     Arguments:
-        k {int} -- maximum sequence index, non-negative integer
-        n {int} -- [description]
-        b {list(int)} -- sequence base, integer exceeding 1
+        k (int): maximum sequence index, non-negative integer
+        n (int): [description]
+        b (list(int)): sequence base, integer exceeding 1
 
     Returns:
-        {list(float)} -- base-b low discrepancy sequence
+        (list(float)): base-b low discrepancy sequence
     """
     assert n >= 2
     assert len(b) >= n
@@ -63,12 +63,12 @@ def cylin_n(k, n, b):
     """Generate using cylindrical coordinate method
 
     Arguments:
-        k {int} -- maximum sequence index, non-negative integer
-        n {int} -- [description]
-        b {list(int)} -- sequence base, integer exceeding 1
+        k (int): maximum sequence index, non-negative integer
+        n (int): [description]
+        b (list(int)): sequence base, integer exceeding 1
 
     Returns:
-        {list(float)} -- base-b low discrepancy sequence
+        (list(float)): base-b low discrepancy sequence
     """
     assert n >= 1
     assert len(b) >= n

@@ -10,13 +10,13 @@ def sphere3(k, b):
     """Generate Sphere-3 Halton sequence 0,..,k
 
     Arguments:
-        k {int} -- maximum sequence index, non-negative integer
+        k (int): maximum sequence index, non-negative integer
 
     Keyword Arguments:
-        b {list(int)} -- sequence base, integer exceeding 1
+        b (list(int)): sequence base, integer exceeding 1
 
     Returns:
-        {list(float)} -- base-b low discrepancy sequence
+        (list(float)): base-b low discrepancy sequence
     """
     assert len(b) >= 3
 

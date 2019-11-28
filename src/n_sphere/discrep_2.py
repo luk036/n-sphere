@@ -5,11 +5,11 @@ def discrep_2(K, X):
     """dispersion measure
 
     Arguments:
-        K {[type]} -- [description]
-        X {[type]} -- [description]
+        K ([type]): [description]
+        X ([type]): [description]
 
     Returns:
-        float -- dispersion
+        float: dispersion
     """
     nsimplex, n = K.shape
     maxq = 0
