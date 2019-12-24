@@ -11,3 +11,9 @@ Low discrepancy sequence on n-Sphere
 [![BCH compliance](https://bettercodehub.com/edge/badge/luk036/n-sphere?branch=master)](https://bettercodehub.com/)
 
 Presentation slides: <https://luk036.github.io/n-sphere/intro.pdf>
+
+Note
+----
+
+This project has been set up using PyScaffold 3.2.1. For details and usage
+information on PyScaffold see <https://pyscaffold.org/>.

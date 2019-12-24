@@ -13,10 +13,10 @@ def sphere3(k, b):
         k (int): maximum sequence index, non-negative integer
 
     Keyword Arguments:
-        b (list(int)): sequence base, integer exceeding 1
+        b ([int]): sequence base, integer exceeding 1
 
     Returns:
-        (list(float)): base-b low discrepancy sequence
+        ([float]): base-b low discrepancy sequence
     """
     assert len(b) >= 3
 

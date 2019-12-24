@@ -13,7 +13,7 @@ def circle(k, base=2):
         base (int): [description] (default: {2})
 
     Returns:
-        (list(float)): base-b low discrepancy sequence
+        ([float]): base-b low discrepancy sequence
     """
     for vd in vdcorput(k, base):
         theta = 2 * math.pi * vd  # map to [0, 2*math.pi]
@@ -28,10 +28,10 @@ def sphere(k, b):
         k (int): maximum sequence index, non-negative integer
 
     Keyword Arguments:
-        b (list(int)): sequence base, integer exceeding 1
+        b ([int]): sequence base, integer exceeding 1
 
     Returns:
-        (list(float)): base-b low discrepancy sequence
+        ([float]): base-b low discrepancy sequence
     """
     assert len(b) >= 2
 
