@@ -1,7 +1,8 @@
-# n_sphere
+# n-sphere
 Low discrepancy sequence on n-Sphere
 
 [![Build Status](https://travis-ci.org/luk036/n-sphere.svg?branch=master)](https://travis-ci.org/luk036/n-sphere)
+![Python application](https://github.com/luk036/n-sphere/workflows/Python%20application/badge.svg)
 [![Build status](https://ci.appveyor.com/api/projects/status/nwrcowcpmmwb20w4?svg=true)](https://ci.appveyor.com/project/luk036/n-sphere)
 [![Documentation Status](https://readthedocs.org/projects/n-sphere/badge/?version=latest)](https://n-sphere.readthedocs.io/en/latest/?badge=latest)
 [![codecov](https://codecov.io/gh/luk036/n-sphere/branch/master/graph/badge.svg)](https://codecov.io/gh/luk036/n-sphere)
