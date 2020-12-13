@@ -1,5 +1,6 @@
 import math
 
+import numexpr as ne
 import numpy as np
 
 from .sphere import sphere
@@ -21,7 +22,7 @@ def sphere3(k, b):
     assert len(b) >= 3
 
     x = np.linspace(0, math.pi, 3 * k)  # ???
-    t = (x - np.sin(x) * np.cos(x)) / 2
+    t = ne.evaluate('(x - sin(x) * cos(x)) / 2')
     range_t = 0.5 * math.pi
     sphere2 = sphere(k, b[1:])
     for vd in vdcorput(k, b[0]):

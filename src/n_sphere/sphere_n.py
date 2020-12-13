@@ -1,5 +1,6 @@
 import math
 
+import numexpr as ne
 import numpy as np
 
 from .sphere import circle, sphere
@@ -20,8 +21,8 @@ def int_sin_power(n, x):
         return x
     if n == 1:
         return -np.cos(x)
-    return (
-        (n - 1) * int_sin_power(n - 2, x) - np.cos(x) * np.sin(x)**(n - 1)) / n
+    t = int_sin_power(n - 2, x)  # NOQA
+    return ne.evaluate('((n - 1) * t - cos(x) * sin(x)**(n - 1)) / n')
 
 
 def sphere_n(k, n, b):
