@@ -9,7 +9,8 @@ from n_sphere.sphere import sphere
 
 def test_sphere():
     npoints = 600
-    Triples = np.array([p for p in sphere(npoints, [2, 3, 5])])
+    sgen = sphere([2, 3, 5])
+    Triples = np.array([next(sgen) for _ in range(npoints)])
     hull = ConvexHull(Triples)
     triangles = hull.simplices
     measure = discrep_2(triangles, Triples)

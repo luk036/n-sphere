@@ -18,11 +18,11 @@ def vdc(n, base=2):
     return vdc
 
 
-def vdcorput(n, base=2):
+def vdcorput_co(k, base=2):
     """[summary]
 
     Arguments:
-        n (int): number of points
+        k (int): number of points
 
     Keyword Arguments:
         base (int): [description] (default: {2})
@@ -30,8 +30,26 @@ def vdcorput(n, base=2):
     Returns:
         int: [description]
     """
-    for i in range(n):
+    for i in range(1, k+1):
         yield vdc(i, base)
+
+
+class vdcorput:
+    def __init__(self, base=2):
+        self.base = base
+        self.count = 0
+
+    def __next__(self):
+        """Get the next item
+
+        Raises:
+            StopIteration:  description
+
+        Returns:
+            float:  the next item
+        """
+        self.count += 1
+        return vdc(self.count, self.base)
 
 
 # First 1000 prime numbers
@@ -120,5 +138,6 @@ prime_table = [
 ]
 
 if __name__ == "__main__":
-    for s in vdcorput(20, 3):
-        print(s)
+    vd = vdcorput(2)
+    for i in range(20):
+        print(next(vd))

@@ -11,7 +11,7 @@ Low discrepancy sequence on n-Sphere
 [![Maintainability](https://api.codeclimate.com/v1/badges/1821ee6527371df3a2b8/maintainability)](https://codeclimate.com/github/luk036/n-sphere/maintainability)
 [![BCH compliance](https://bettercodehub.com/edge/badge/luk036/n-sphere?branch=master)](https://bettercodehub.com/)
 
-Presentation slides: <https://luk036.github.io/n-sphere/intro.pdf>
+Presentation slides: <https://luk036.github.io/n_sphere/intro.pdf>
 
 Note
 ----
